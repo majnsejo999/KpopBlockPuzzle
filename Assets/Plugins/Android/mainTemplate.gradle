@@ -1,0 +1,210 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven { url 'https://applovin.bintray.com/Quality-Service' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.3'
+        classpath 'com.applovin.quality:AppLovinQualityServiceGradlePlugin:3.+'
+}
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+		 maven {
+            url 'https://maven.google.com'
+        }
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'applovin-quality-service'
+
+applovin {
+    // NOTE: DO NOT CHANGE - this is NOT your AppLovin MAX SDK key - this is a derived key.
+    apiKey 'iWOPvQyfaOZouWnG8Mwpwzd1GU3TXWTgNKQx2XvPtTQ1ntiDRmgKIxD9V9deRVSDRluW19NoTGeyIMsQ-mNIzn'
+}
+
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(name: 'androidx.activity.activity-1.0.0', ext:'aar')
+    implementation(name: 'androidx.appcompat.appcompat-1.1.0', ext:'aar')
+    implementation(name: 'androidx.appcompat.appcompat-resources-1.1.0', ext:'aar')
+    implementation(name: 'androidx.arch.core.core-runtime-2.0.1', ext:'aar')
+    implementation(name: 'androidx.asynclayoutinflater.asynclayoutinflater-1.0.0', ext:'aar')
+    implementation(name: 'androidx.browser.browser-1.0.0', ext:'aar')
+    implementation(name: 'androidx.cardview.cardview-1.0.0', ext:'aar')
+    implementation(name: 'androidx.coordinatorlayout.coordinatorlayout-1.0.0', ext:'aar')
+    implementation(name: 'androidx.core.core-1.2.0', ext:'aar')
+    implementation(name: 'androidx.cursoradapter.cursoradapter-1.0.0', ext:'aar')
+    implementation(name: 'androidx.customview.customview-1.0.0', ext:'aar')
+    implementation(name: 'androidx.documentfile.documentfile-1.0.0', ext:'aar')
+    implementation(name: 'androidx.drawerlayout.drawerlayout-1.0.0', ext:'aar')
+    implementation(name: 'androidx.exifinterface.exifinterface-1.0.0', ext:'aar')
+    implementation(name: 'androidx.fragment.fragment-1.1.0', ext:'aar')
+    implementation(name: 'androidx.interpolator.interpolator-1.0.0', ext:'aar')
+    implementation(name: 'androidx.legacy.legacy-support-core-ui-1.0.0', ext:'aar')
+    implementation(name: 'androidx.legacy.legacy-support-core-utils-1.0.0', ext:'aar')
+    implementation(name: 'androidx.legacy.legacy-support-v4-1.0.0', ext:'aar')
+    implementation(name: 'androidx.lifecycle.lifecycle-livedata-2.0.0', ext:'aar')
+    implementation(name: 'androidx.lifecycle.lifecycle-livedata-core-2.0.0', ext:'aar')
+    implementation(name: 'androidx.lifecycle.lifecycle-runtime-2.1.0', ext:'aar')
+    implementation(name: 'androidx.lifecycle.lifecycle-service-2.0.0', ext:'aar')
+    implementation(name: 'androidx.lifecycle.lifecycle-viewmodel-2.1.0', ext:'aar')
+    implementation(name: 'androidx.loader.loader-1.0.0', ext:'aar')
+    implementation(name: 'androidx.localbroadcastmanager.localbroadcastmanager-1.0.0', ext:'aar')
+    implementation(name: 'androidx.media.media-1.0.0', ext:'aar')
+    implementation(name: 'androidx.print.print-1.0.0', ext:'aar')
+    implementation(name: 'androidx.recyclerview.recyclerview-1.0.0', ext:'aar')
+    implementation(name: 'androidx.room.room-runtime-2.1.0', ext:'aar')
+    implementation(name: 'androidx.savedstate.savedstate-1.0.0', ext:'aar')
+    implementation(name: 'androidx.slidingpanelayout.slidingpanelayout-1.0.0', ext:'aar')
+    implementation(name: 'androidx.sqlite.sqlite-2.0.1', ext:'aar')
+    implementation(name: 'androidx.sqlite.sqlite-framework-2.0.1', ext:'aar')
+    implementation(name: 'androidx.swiperefreshlayout.swiperefreshlayout-1.0.0', ext:'aar')
+    implementation(name: 'androidx.vectordrawable.vectordrawable-1.1.0', ext:'aar')
+    implementation(name: 'androidx.vectordrawable.vectordrawable-animated-1.1.0', ext:'aar')
+    implementation(name: 'androidx.versionedparcelable.versionedparcelable-1.1.0', ext:'aar')
+    implementation(name: 'androidx.viewpager.viewpager-1.0.0', ext:'aar')
+    implementation(name: 'androidx.work.work-runtime-2.1.0', ext:'aar')
+    implementation(name: 'billing-3.0.1', ext:'aar')
+    implementation(name: 'com.adcolony.sdk-4.4.0', ext:'aar')
+    implementation(name: 'com.android.installreferrer.installreferrer-1.0', ext:'aar')
+    implementation(name: 'com.applovin.applovin-sdk-9.14.12', ext:'aar')
+    implementation(name: 'com.facebook.android.audience-network-sdk-6.2.0', ext:'aar')
+    implementation(name: 'com.facebook.android.facebook-applinks-8.2.0', ext:'aar')
+    implementation(name: 'com.facebook.android.facebook-common-8.2.0', ext:'aar')
+    implementation(name: 'com.facebook.android.facebook-core-8.2.0', ext:'aar')
+    implementation(name: 'com.facebook.android.facebook-gamingservices-8.2.0', ext:'aar')
+    implementation(name: 'com.facebook.android.facebook-login-8.2.0', ext:'aar')
+    implementation(name: 'com.facebook.android.facebook-share-8.2.0', ext:'aar')
+    implementation(name: 'com.fyber.vamp.core-sdk-7.7.4', ext:'aar')
+    implementation(name: 'com.fyber.vamp.mraid-kit-7.7.4', ext:'aar')
+    implementation(name: 'com.fyber.vamp.video-kit-7.7.4', ext:'aar')
+    implementation(name: 'com.google.android.datatransport.transport-api-2.2.1', ext:'aar')
+    implementation(name: 'com.google.android.datatransport.transport-backend-cct-2.3.1', ext:'aar')
+    implementation(name: 'com.google.android.datatransport.transport-runtime-2.2.4', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-ads-19.6.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-ads-base-19.6.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-ads-identifier-17.0.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-ads-lite-19.6.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-base-17.5.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-basement-17.5.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-gass-19.6.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-measurement-18.0.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-measurement-api-18.0.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-measurement-base-18.0.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-measurement-impl-18.0.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-measurement-sdk-18.0.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-measurement-sdk-api-18.0.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-stats-17.0.0', ext:'aar')
+    implementation(name: 'com.google.android.gms.play-services-tasks-17.2.0', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-analytics-18.0.0', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-analytics-unity-7.0.1', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-app-unity-7.0.1', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-common-19.3.1', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-components-16.0.0', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-crashlytics-17.2.2', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-crashlytics-unity-7.0.1', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-encoders-json-17.0.0', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-installations-16.3.3', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-installations-interop-16.0.0', ext:'aar')
+    implementation(name: 'com.google.firebase.firebase-measurement-connector-18.0.0', ext:'aar')
+    implementation(name: 'com.inmobi.monetization.inmobi-ads-9.1.0', ext:'aar')
+    implementation(name: 'com.ironsource.adapters.adcolonyadapter-4.3.5', ext:'aar')
+    implementation(name: 'com.ironsource.adapters.admobadapter-4.3.15', ext:'aar')
+    implementation(name: 'com.ironsource.adapters.applovinadapter-4.3.21', ext:'aar')
+    implementation(name: 'com.ironsource.adapters.facebookadapter-4.3.23', ext:'aar')
+    implementation(name: 'com.ironsource.adapters.fyberadapter-4.3.10', ext:'aar')
+    implementation(name: 'com.ironsource.adapters.inmobiadapter-4.3.8', ext:'aar')
+    implementation(name: 'com.ironsource.adapters.unityadsadapter-4.3.9', ext:'aar')
+    implementation(name: 'com.ironsource.sdk.mediationsdk-7.1.0.2', ext:'aar')
+    implementation(name: 'com.squareup.picasso.picasso-2.71828', ext:'aar')
+    implementation(name: 'com.unity3d.ads.unity-ads-3.6.0', ext:'aar')
+    implementation(name: 'common', ext:'aar')
+    implementation(name: 'facebook-android-wrapper-8.0.0', ext:'aar')
+    implementation(name: 'pushnoty2-debug', ext:'aar')
+    implementation project(':FirebaseApp.androidlib')
+    implementation project(':FirebaseCrashlytics.androidlib')
+    implementation project(':IronSource.plugin')
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+	multiDexEnabled true
+        minSdkVersion 19
+        targetSdkVersion 29
+        applicationId 'com.puzzle.block.jewel.classic.gem.brain.free.game'
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+        versionCode 1
+        versionName '1.1'
+    }
+
+    lintOptions {
+		checkReleaseBuilds false
+        abortOnError false
+    }
+
+    aaptOptions {
+        noCompress = ['.unity3d', '.ress', '.resource', '.obb', 'build_info.txt', 'google-services-desktop.json', 'index.html']
+    }
+
+    signingConfigs {
+        release {
+           storeFile file('E:/Source/BlockPuzzleClassicJewel/jewelblock.keystore')
+            storePassword 'jewelblock'
+            keyAlias 'jewelblock'
+            keyPassword 'jewelblock'
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    packagingOptions {
+        doNotStrip '*/armeabi-v7a/*.so'
+        doNotStrip '*/arm64-v8a/*.so'
+    }
+
+    bundle {
+        language {
+            enableSplit = true
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+}

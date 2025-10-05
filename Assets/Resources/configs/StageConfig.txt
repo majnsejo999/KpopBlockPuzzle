@@ -1,0 +1,34 @@
+{
+  "data0": [
+    {
+      "ObstacleFrequench": 10.0,
+      "Col": 8.0,
+      "StageID": 1.0,
+      "Row": 8.0
+    },
+    {
+      "ObstacleFrequench": 10.0,
+      "Col": 8.0,
+      "StageID": 2.0,
+      "Row": 8.0
+    },
+    {
+      "ObstacleFrequench": 10.0,
+      "Col": 8.0,
+      "StageID": 3.0,
+      "Row": 8.0
+    },
+    {
+      "ObstacleFrequench": 9.0,
+      "Col": 8.0,
+      "StageID": 4.0,
+      "Row": 8.0
+    },
+    {
+      "ObstacleFrequench": 9.0,
+      "Col": 8.0,
+      "StageID": 5.0,
+      "Row": 8.0
+    }
+  ]
+}
